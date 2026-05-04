@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<title>Sentiment Analyzer</title>
+<link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+</head>
+<body>
+<div class="card">
+<h1>🎬 Movie Sentiment Analyzer</h1>
+<p>Type your movie review below 👇</p>
+<form method="POST">
+<textarea name="review" placeholder=" Type your review..." required></textarea>
+<button>Analyze</button>
+</form>
+{% if prediction %}
+{% if prediction == "positive" %}
+    <p class="result positive">👍 Positive</p>
+{% elif prediction == "negative" %}
+    <p class="result negative">👎 Negative</p>
+{% endif %}
+{% endif %}
+<canvas id="myChart"></canvas>
+</div>
+<script>
+var acc = {{ accuracy }};
+
+var ctx = document.getElementById('myChart').getContext('2d');
+
+var chart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Accuracy'],
+        datasets: [{
+            label: 'Model Accuracy',
+            data: [acc],
+        }]
+    }
+});
+</script>
+</body>
+</html>

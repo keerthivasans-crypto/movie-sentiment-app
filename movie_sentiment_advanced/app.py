@@ -2,8 +2,8 @@ from flask import Flask,render_template,request
 import pickle
 
 app = Flask(__name__)
-model = pickle.load(open("model.pkl","rb"))
-vectorizer = pickle.load(open("vectorizer.pkl","rb"))
+model = pickle.load(open("movie_sentiment_advanced/model.pkl","rb"))
+vectorizer = pickle.load(open("movie_sentiment_advanced/vectorizer.pkl","rb"))
 
 @app.route("/",methods=["GET","POST"])
 def home():

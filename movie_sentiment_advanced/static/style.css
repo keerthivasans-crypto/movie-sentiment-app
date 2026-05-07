@@ -28,6 +28,16 @@ body {
     color: white;
 
     box-shadow: 0 0 25px rgba(0,0,0,0.5);
+animation: glow 2s infinite alternate;
+@keyframes glow {
+    from {
+        box-shadow: 0 0 15px rgba(255,0,0,0.3);
+    }
+
+    to {
+        box-shadow: 0 0 35px rgba(255,0,0,0.8);
+    }
+}
 }
 
 textarea {

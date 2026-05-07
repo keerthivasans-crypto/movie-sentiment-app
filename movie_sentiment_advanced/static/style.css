@@ -129,3 +129,30 @@ p {
 .negative-fill {
     background: #ff4d4d;
 }
+.loader {
+    display: none;
+
+    border: 5px solid #f3f3f3;
+
+    border-top: 5px solid red;
+
+    border-radius: 50%;
+
+    width: 35px;
+
+    height: 35px;
+
+    animation: spin 1s linear infinite;
+
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.stars {
+    font-size: 24px;
+    margin-top: 10px;
+}

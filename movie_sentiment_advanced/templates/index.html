@@ -6,6 +6,9 @@
 <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
 </head>
 <body>
+<button class="theme-btn" onclick="toggleTheme()">
+    🌙 Toggle Theme
+</button>
 <div class="card">
 <h1>🎬 Movie Sentiment Analyzer</h1>
 <p>Type your movie review below 👇</p>
@@ -38,10 +41,26 @@
         </div>
     </div>
 {% endif %}{% endif %}
+<div class="chat-box">
+
+    <h3>🤖 Movie AI Assistant</h3>
+
+    <p>Ask anything about movies!</p>
+
+    <input type="text" placeholder="Ask about movies...">
+
+    <button>Send</button>
+
+</div>
 </div>
 <script>
 function showLoader() {
     document.getElementById("loader").style.display = "block";
+}
+</script>
+<script>
+function toggleTheme() {
+    document.body.classList.toggle("light-mode");
 }
 </script>
 </body>

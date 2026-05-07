@@ -11,10 +11,13 @@
 <p>Type your movie review below 👇</p>
 <form method="POST">
 <textarea name="review" placeholder=" Type your review..." required></textarea>
-<button>Analyze</button>
+<button onclick="showLoader()">Analyze</button>
+
+<div id="loader" class="loader"></div>
 </form>
 {% if prediction %}
 {% if prediction == "positive" %}
+<p class="stars">⭐⭐⭐⭐⭐</p>
     <div class="result-box positive-box">
         <h2>😊 Positive Review</h2>
         <p>Confidence: 85%</p>
@@ -25,6 +28,7 @@
     </div>
 
 {% elif prediction == "negative" %}
+<p class="stars">⭐☆☆☆☆</p>
     <div class="result-box negative-box">
         <h2>😡 Negative Review</h2>
         <p>Confidence: 85%</p>
@@ -35,5 +39,10 @@
     </div>
 {% endif %}{% endif %}
 </div>
+<script>
+function showLoader() {
+    document.getElementById("loader").style.display = "block";
+}
+</script>
 </body>
 </html>

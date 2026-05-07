@@ -1,5 +1,15 @@
 body {
-    background: linear-gradient(to right, #36d1dc, #5b86e5);
+    background: 
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url('/static/bg.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    font-family: Arial;
+    text-align: center;
     font-family: Salina;
     text-align: center;
 }

@@ -15,31 +15,68 @@ body {
 }
 
 .card {
-    background: linear-gradient(to top, #380036, #0CBABA) ;
-    padding: 30px;
-    margin: 50px auto;
-    width: 350px;
-    border-radius: 15px;
+     background: rgba(0, 0, 0, 0.75);
+     backdrop-filter: blur(10px);
+     padding: 30px;
+
+    margin: 40px auto;
+
+    width: 400px;
+
+    border-radius: 20px;
+
+    color: white;
+
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
 }
 
 textarea {
     width: 100%;
-    height: 100px;
-    border-radius: 5px;
-}
 
-button {
-    background: blue;
-    color: white;
-    padding: 10px;
+    height: 120px;
+
+    border-radius: 10px;
+
+    padding: 12px;
+
     border: none;
-    width: 100%;
-}
 
+    font-size: 16px;
+
+    background: rgba(255,255,255,0.9);
+}
+button {
+    background: #e50914;
+
+    color: white;
+
+    padding: 12px;
+
+    width: 100%;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    margin-top: 10px;
+}
+button:hover {
+    background: #ff1f1f;
+}
 .positive {
     color: green;
 }
 
 .negative {
     color: red;
+}
+h1 {
+    color: white;
+}
+p {
+    color: #ddd;
 }

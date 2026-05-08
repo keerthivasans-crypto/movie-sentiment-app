@@ -5,8 +5,9 @@ import pickle
 app = Flask(__name__)
 
 # Load ML model
-model = pickle.load(open("model.pkl", "rb"))
-vectorizer = pickle.load(open("vectorizer.pkl", "rb"))
+model = pickle.load(open("movie_sentiment_advanced/model.pkl", "rb"))
+
+vectorizer = pickle.load(open("movie_sentiment_advanced/vectorizer.pkl", "rb"))
 
 # HuggingFace API
 API_URL = "https://api-inference.huggingface.co/models/google/flan-t5-small"

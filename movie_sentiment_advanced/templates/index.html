@@ -5,6 +5,42 @@
 <title>Sentiment Analyzer</title>
 <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
 </head>
+<div class="header">
+
+    <h1 class="logo">MOVIELENS AI</h1>
+
+    <p class="subtitle">
+        Understand audience sentiment using AI
+    </p>
+
+</div>
+<div class="stats-grid">
+
+    <div class="stat-card">
+
+        <h2>1274</h2>
+
+        <p>Positive Reviews</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h2>543</h2>
+
+        <p>Negative Reviews</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h2>2106</h2>
+
+        <p>Total Reviews</p>
+
+    </div>
+
+</div>
 <body>
 <button class="theme-btn" onclick="toggleTheme()">
     🌙 Toggle Theme
@@ -53,6 +89,52 @@
     </button>
 
     <div id="chatResponse"></div>
+
+<div id="chatResponse"></div>
+
+</div>
+
+<div class="reviews-section">
+
+    <h2>🎥 Recent Movie Reviews</h2>
+
+    <div class="reviews-grid">
+
+        <div class="review-card">
+
+            <h3>Oppenheimer</h3>
+
+            <p>
+                "Masterpiece movie with brilliant acting!"
+            </p>
+
+        </div>
+
+        <div class="review-card">
+
+            <h3>Barbie</h3>
+
+            <p>
+                "Fun, colorful and entertaining movie."
+            </p>
+
+        </div>
+
+        <div class="review-card">
+
+            <h3>Interstellar</h3>
+
+            <p>
+                "Mind blowing sci-fi experience."
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
 
 </div>
 </div>

@@ -217,3 +217,15 @@ p {
         width: 100%;
     }
 }
+#chatResponse {
+
+    margin-top: 15px;
+
+    background: rgba(255,255,255,0.1);
+
+    padding: 10px;
+
+    border-radius: 10px;
+
+    color: white;
+}

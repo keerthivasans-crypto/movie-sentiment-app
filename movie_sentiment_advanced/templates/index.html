@@ -45,11 +45,14 @@
 
     <h3>🤖 Movie AI Assistant</h3>
 
-    <p>Ask anything about movies!</p>
+    <input type="text" id="userMessage"
+           placeholder="Ask about movies...">
 
-    <input type="text" placeholder="Ask about movies...">
+    <button onclick="sendMessage()">
+        Send
+    </button>
 
-    <button>Send</button>
+    <div id="chatResponse"></div>
 
 </div>
 </div>
@@ -62,6 +65,31 @@ function showLoader() {
 function toggleTheme() {
     document.body.classList.toggle("light-mode");
 }
+</script>
+<script>
+
+async function sendMessage() {
+
+    let message =
+        document.getElementById("userMessage").value;
+
+    let formData = new FormData();
+
+    formData.append("message", message);
+
+    let response = await fetch("/chat", {
+
+        method: "POST",
+
+        body: formData
+    });
+
+    let data = await response.json();
+
+    document.getElementById("chatResponse").innerHTML =
+        "<p><b>AI:</b> " + data.reply + "</p>";
+}
+
 </script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <title>Sentiment Analyzer</title>
 <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
@@ -42,8 +43,8 @@
 
 </div>
 <body>
-<button class="theme-btn" onclick="toggleTheme()">
-    🌙 Toggle Theme
+<button class="theme-toggle" onclick="toggleTheme()">
+    🌙
 </button>
 <div class="card">
 <h1>🎬 Movie Sentiment Analyzer</h1>
@@ -144,9 +145,23 @@ function showLoader() {
 }
 </script>
 <script>
+
 function toggleTheme() {
+
     document.body.classList.toggle("light-mode");
+
+    let btn = document.querySelector(".theme-toggle");
+
+    if(document.body.classList.contains("light-mode")) {
+
+        btn.innerHTML = "☀️";
+
+    } else {
+
+        btn.innerHTML = "🌙";
+    }
 }
+
 </script>
 <script>
 

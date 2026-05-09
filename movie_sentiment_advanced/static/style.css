@@ -158,20 +158,45 @@ p {
     font-size: 24px;
     margin-top: 10px;
 }
-.theme-btn {
-    background: #222;
-    color: white;
+.theme-toggle {
+
+    position: fixed;
+
+    top: 20px;
+
+    right: 20px;
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 50%;
+
     border: none;
-    padding: 10px;
-    border-radius: 8px;
+
+    background: rgba(0,0,0,0.7);
+
+    color: white;
+
+    font-size: 24px;
+
     cursor: pointer;
-    margin-bottom: 15px;
+
+    z-index: 999;
+
+    transition: 0.3s;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 
-.light-mode {
-    background: white;
-    color: black;
-}
+.theme-toggle:hover {
+
+    transform: scale(1.1);
+
+    background: rgba(255,0,0,0.8);
+}}
 .chat-box {
 
     margin-top: 20px;
@@ -413,5 +438,140 @@ p {
         opacity: 1;
 
         transform: translateY(0);
+    }
+}
+.light-mode {
+
+    background: #f5f5f5;
+
+    color: black;
+}
+
+.light-mode .card {
+
+    background: rgba(255,255,255,0.95);
+
+    color: black;
+}
+
+.light-mode textarea,
+.light-mode input {
+
+    background: white;
+
+    color: black;
+}
+
+.light-mode .chat-box,
+.light-mode .review-card,
+.light-mode .stat-card {
+
+    background: rgba(255,255,255,0.9);
+
+    color: black;
+}
+
+.light-mode h1,
+.light-mode h2,
+.light-mode h3,
+.light-mode p {
+
+    color: black;
+}
+@media screen and (max-width: 768px) {
+
+    body {
+
+        padding: 10px;
+    }
+
+    .logo {
+
+        font-size: 35px;
+    }
+
+    .subtitle {
+
+        font-size: 14px;
+    }
+
+    .stats-grid {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 15px;
+    }
+
+    .stat-card {
+
+        width: 90%;
+
+        padding: 20px;
+    }
+
+    .card {
+
+        width: 95%;
+
+        padding: 20px;
+
+        margin: 20px auto;
+    }
+
+    textarea {
+
+        width: 100%;
+
+        height: 140px;
+
+        font-size: 16px;
+    }
+
+    input {
+
+        width: 100%;
+
+        font-size: 16px;
+    }
+
+    button {
+
+        width: 100%;
+
+        padding: 15px;
+
+        font-size: 18px;
+    }
+
+    .chat-box {
+
+        width: 100%;
+    }
+
+    .reviews-grid {
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .review-card {
+
+        width: 90%;
+    }
+
+    .theme-toggle {
+
+        width: 45px;
+
+        height: 45px;
+
+        font-size: 20px;
+
+        top: 15px;
+
+        right: 15px;
     }
 }
